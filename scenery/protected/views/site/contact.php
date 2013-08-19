@@ -1,15 +1,15 @@
-<?php
+﻿<?php
 /* @var $this SiteController */
 /* @var $model ContactForm */
 /* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . ' - Contact Us';
+$this->pageTitle=Yii::app()->name . ' - Kontakt';
 $this->breadcrumbs=array(
-	'Contact',
+	'Kontakt',
 );
 ?>
 
-<h1>Contact Us</h1>
+<h1>Kontakt</h1>
 
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 
@@ -20,7 +20,9 @@ $this->breadcrumbs=array(
 <?php else: ?>
 
 <p>
-If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+Du hast hier die Möglichkeit die Fotografen höchst persönlich zu kontaktieren (welch Ehre^^).<br>
+Wenn du in der Lage bist die Formulare da unten richtig auszufüllen, sind wir in der Lage dir zu antworten.<br>
+Deal? DEAL!
 </p>
 
 <div class="form">
@@ -33,7 +35,7 @@ If you have business inquiries or other questions, please fill out the following
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Felder mit <span class="required">*</span> werden benötigt.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -50,32 +52,32 @@ If you have business inquiries or other questions, please fill out the following
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'subject'); ?>
+		<?php echo $form->labelEx($model,'Betreff'); ?>
 		<?php echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'subject'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'body'); ?>
+		<?php echo $form->labelEx($model,'Inhalt'); ?>
 		<?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'body'); ?>
 	</div>
 
 	<?php if(CCaptcha::checkRequirements()): ?>
 	<div class="row">
-		<?php echo $form->labelEx($model,'verifyCode'); ?>
+		<?php echo $form->labelEx($model,'Prüfcode'); ?>
 		<div>
 		<?php $this->widget('CCaptcha'); ?>
 		<?php echo $form->textField($model,'verifyCode'); ?>
 		</div>
-		<div class="hint">Please enter the letters as they are shown in the image above.
-		<br/>Letters are not case-sensitive.</div>
+		<div class="hint">Gib bitte die Buchstaben ein, welche hier abgebildet sind..
+		<br/>Du musst nicht auf Groß- und Kleinschreibung achten.</div>
 		<?php echo $form->error($model,'verifyCode'); ?>
 	</div>
 	<?php endif; ?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton('Abschicken',array('class'=>'btn btn-success')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

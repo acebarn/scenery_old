@@ -16,9 +16,7 @@ rem -------------------------------------------------------------
 
 set YII_PATH=%~dp0
 
-if "%PHP_COMMAND%" == "" set PHP_COMMAND=php.exe
-
-cd C:\Users\xce35g5\Documents\Apps\xampp\php
+if "%PHP_COMMAND%" == "" set PHP_COMMAND=..\..\..\..\php\php.exe
 
 "%PHP_COMMAND%" "%YII_PATH%yiic" %*
 
