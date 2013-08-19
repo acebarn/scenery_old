@@ -18,6 +18,3 @@ Hallo, mein Name ist Alessio,<br>
 ich bin 19 Jahre alt und meine Hobbys sind Tischtennis, Tennis, Mountainbiking, Piano, Programmieren und und natürlich Fotografie.<br>
 Ich knipse jetzt schon ein gutes Vierteljahr lang und es macht von Mal zu Mal mehr Spaß. Ich lege viel Wert auf kleine, oft unauffällige Details, die man am allerbesten auf einem Likeapicture festhalten kann.
 </p>
-<p>
-Guten Tag, ich heiße Sebastian, bin 19 Jahre jung und meine Hobbys sind neben der Fotografie Akkordeon spielen, Tanzen, Programmieren und Fahrradfahren. <br> Vor 4 Jahren kaufte ich mir eine Bridge-Kamera und ab dann fotografierte ich mehr oder weniger regelmäßig. Als ich mir vor Kurzem mit meinem Kollegen Alessio eine neue Spiegelreflexkamera holte, ward die Leidenschaft der Fotografie aufs Neue entfacht.
-</p>
