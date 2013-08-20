@@ -65,7 +65,7 @@ Deal? DEAL!
 
 	<?php if(CCaptcha::checkRequirements()): ?>
 	<div class="row">
-		<?php echo $form->labelEx($model,'Prüfcode'); ?>
+		<?php echo $form->labelEx($model,'Pr&uuml;fcode'); ?>
 		<div>
 		<?php $this->widget('CCaptcha'); ?>
 		<?php echo $form->textField($model,'verifyCode'); ?>

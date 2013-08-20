@@ -17,11 +17,24 @@
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
-
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-image-gallery.css" />
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
+
+<?php 
+//Hier die Java-Skripte registrieren
+$baseUrl = Yii::app()->request->baseUrl;  //Root-Pfad in Variable speichern
+$cs = Yii::app()->getClientScript();   //Das Client-Skript anfordern
+$cs->registerCoreScript('jquery');
+$cs->registerScriptFile($baseUrl.'/js/bootstrap.js');
+$cs->registerScriptFile($baseUrl.'/js/load-image.js');
+$cs->registerScriptFile($baseUrl.'/js/bootstrap-image-gallery.js');
+$cs->registerScriptFile($baseUrl.'/js/main.js');
+?>
+
 
 <div class="container" id="page">
 
@@ -37,6 +50,7 @@
 	            <div class="nav-collapse">
 					<?php $this->widget('zii.widgets.CMenu',array(
 						'items'=>array(
+							array('label'=>'Galerie', 'url'=>array('/gallery/index')),
 							array('label'=>'Über Uns', 'url'=>array('/site/page', 'view'=>'about')),
 							array('label'=>'Kontakt', 'url'=>array('/site/contact')),
 							array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

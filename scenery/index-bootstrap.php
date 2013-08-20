@@ -1,27 +1,44 @@
-﻿<?php
-/* @var $this SiteController */
+<!DOCTYPE HTML>
 
-$this->pageTitle=Yii::app()->name;
-
-//  $baseUrl = Yii::app()->baseUrl;
-//  $cs = Yii::app()->getClientScript();
-//  $cs->registerCssFile($baseUrl.'/css/bootstrap.css');
-//  $cs->registerCssFile($baseUrl.'/css/bootstrap-image-gallery.css');
-//  $cs->registerCssFile($baseUrl.'/css/bootstrap.min.css');
-
-// $cs->registerScriptFile($baseUrl.'/js/bootstrap.js');
-// $cs->registerScriptFile($baseUrl.'/js/load-image.js');
-// $cs->registerScriptFile($baseUrl.'/js/bootstrap-image-gallery.js');
-// $cs->registerScriptFile($baseUrl.'/js/main.js');
-// $cs->registerScriptFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
-
-?>
-
+<html lang="de">
+<head>
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<meta charset="utf-8">
+<title>Bootstrap Image Gallery</title>
+<meta name="description" content="Bootstrap Image Gallery is an extension to the Modal dialog of Twitter's Bootstrap toolkit, to ease navigation between a set of gallery images. It features mouse and keyboard navigation, transition effects, fullscreen mode and slideshow functionality.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<!--[if lt IE 7]><link rel="stylesheet" href="css/bootstrap-ie6.css"><![endif]-->
+<link rel="stylesheet" href="css/bootstrap-image-gallery.css">
+</head>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Eine Bildergalerie mit Bootstrap</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Bildergalerie</a></li>
+                    <li><a href="#">Über uns</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container-fluid">
     <header>
         <h1>Scenery Bildergalerie</h1>
-        <p>Herzlich wilkommen bei Scenery! <br> Wenn du glaubst, wir seien Image-Hoster, solltest du dich dringendst von dieser Seite entfernen, da wir bereits die Hunde auf dich losgelassen haben...<br>Falls du nur gute Fotografie bestaunen willst, bist du immernoch herzlich willkommen!</p>
-        
         <blockquote>
             <p>Warum andere Galerien benutzen, wenn man die Scenery-Bildergalerie benutzen kann??? Außerdem sind hier die Bilder besser und wir haben Schokokekse!</p>
         </blockquote>
@@ -55,10 +72,27 @@ $this->pageTitle=Yii::app()->name;
 					echo "		<a href=\"images/".$datei."\" class=\"thumbnail\" data-gallery=\"gallery\"><img src=\"images/".$datei."\" width=\"200\" height=\"200\"></a>";
 					echo "	</div>";
 				}
+				
+				
 			}
 			echo "</div>";
 	?>
 	</div>
+	
+	<fieldset>
+		<legend>Ein Bild hochladen</legend>
+		<div class="form-group">
+		  <label for="exampleInputFile">Bilder-Upload</label>
+		  <input type="file" id="exampleInputFile" name="datei">
+		  <p class="help-block">Lade hier einfach dein Bild hoch.</p>	
+			<br>
+		</div>
+		<button type="submit" class="btn btn-default">Los geht's</button>
+	</fieldset>
+
+	<?php
+		move_uploaded_file($_FILES['datei']['tmp_name'], "images");
+	?> 
 	
 <!-- modal-gallery is the modal dialog used for the image gallery -->
 <div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
@@ -89,4 +123,10 @@ $this->pageTitle=Yii::app()->name;
         </a>
     </div>
 </div>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/load-image.js"></script>
+<script src="js/bootstrap-image-gallery.js"></script><!---->
+<script src="js/main.js"></script>
+</body> 
+</html>
