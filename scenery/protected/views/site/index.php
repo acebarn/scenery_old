@@ -60,6 +60,61 @@ $this->pageTitle=Yii::app()->name;
 	?>
 	</div>
 	
+	
+	
+	
+	
+	
+	
+	
+	<title>Größenänderung überwachen</title>
+<script type="text/javascript">
+function Fensterweite () {
+  if (window.innerWidth) {
+    return window.innerWidth;
+  } else if (document.body && document.body.offsetWidth) {
+    return document.body.offsetWidth;
+  } else {
+    return 0;
+  }
+}
+
+
+function neuAufbau () {
+  if (Weite != Fensterweite())
+    location.href = location.href;
+}
+
+/* Überwachung von Netscape initialisieren */
+if (!window.Weite && window.innerWidth) {
+  window.onresize = neuAufbau;
+  Weite = Fensterweite();
+
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+/* Überwachung von Internet Explorer initialisieren */
+if (!window.Weite && document.body && document.body.offsetWidth) {
+  window.onresize = neuAufbau;
+  Weite = Fensterweite();
+ 
+}
+</script>
+<div id="Beispiel" style="position:absolute; top:100px; left:100px; border:solid 1px #000000;">
+Text
+</div>
+<script type="text/javascript">
+document.write("Weite: " + Weite);
+</script>
+
+
+
+
+
+
+	
 <!-- modal-gallery is the modal dialog used for the image gallery -->
 <div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
     <div class="modal-header">
