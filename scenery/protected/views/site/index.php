@@ -67,48 +67,93 @@ $this->pageTitle=Yii::app()->name;
 	
 	
 	
-	<title>Größenänderung überwachen</title>
 <script type="text/javascript">
-function Fensterweite () {
-  if (window.innerWidth) {
-    return window.innerWidth;
-  } else if (document.body && document.body.offsetWidth) {
-    return document.body.offsetWidth;
-  } else {
-    return 0;
-  }
-}
+	function Fensterweite () {
+	  if (window.innerWidth) {
+		return window.innerWidth;
+	  } else if (document.body && document.body.offsetWidth) {
+		return document.body.offsetWidth;
+	  } else {
+		return 0;
+	  }
+	}
 
 
-function neuAufbau () {
-  if (Weite != Fensterweite())
-    location.href = location.href;
-}
+	function neuAufbau () {
+	  if (Weite != Fensterweite()){
 
-/* Überwachung von Netscape initialisieren */
-if (!window.Weite && window.innerWidth) {
-  window.onresize = neuAufbau;
-  Weite = Fensterweite();
 
-}
+		location.href="index.php?zellennummer="+Zellennummer; 
+
+
+		//location.href = location.href;
+
+
+		}
+	}
+
+	/* Überwachung von Netscape initialisieren */
+	if (!window.Weite && window.innerWidth) {
+	  window.onresize = neuAufbau;
+	  Weite = Fensterweite();
+	   Zellennummer = 2;
+		if(Weite < 1000){
+			Zellennummer = 1
+		}
+		else
+			{
+			Zellennummer = 2;
+		//	alert("Hallo");
+		}
+
+	}
 </script>
-</head>
+
 <body>
 <script type="text/javascript">
-/* Überwachung von Internet Explorer initialisieren */
-if (!window.Weite && document.body && document.body.offsetWidth) {
-  window.onresize = neuAufbau;
-  Weite = Fensterweite();
- 
-}
+	/* Überwachung von Internet Explorer initialisieren */
+	if (!window.Weite && document.body && document.body.offsetWidth) {
+
+
+	 window.onresize = neuAufbau;
+	  Weite = Fensterweite();
+	   Zellennummer = 2;
+		if(Weite > 1000){
+			Zellennummer = 1
+		}
+		else 
+			{
+			Zellennummer = 2;
+			//alert("Hallo");
+		}	 
+
+	}
 </script>
 <div id="Beispiel" style="position:absolute; top:100px; left:100px; border:solid 1px #000000;">
 Text
 </div>
 <script type="text/javascript">
-document.write("Weite: " + Weite);
-</script>
+	document.write("Weite: " + Weite);
+	
 
+</script>
+<?php
+	//variable holen
+			$zellennummer = $_GET['zellennummer'];
+			echo "Zellennumer".$zellennummer;
+			$bilder = scandir('images'); //Den Ordner "images" auslesen
+			echo "<div class=\"row\">";
+			foreach ($bilder as $datei)
+			{
+				if (!is_dir('images/'.$datei) && $datei != "." && $datei != ".."  && $datei != "_notes" && pathinfo($datei)['basename'] != "Thumbs.db" &&  (pathinfo($datei)['extension'] == 'jpg' || pathinfo($datei)['extension'] == 'JPG' ))
+				{
+					echo "	<div class=\"span".$zellennummer."\">";
+					echo "		<a href=\"images/".$datei."\" class=\"thumbnail\" data-gallery=\"gallery\"><img src=\"images/".$datei."\" width=\"200\" height=\"200\"></a>";
+					echo "	</div>";
+				}
+			}
+			echo "</div>";
+	?>;
 
 
 
