@@ -139,6 +139,8 @@ Text
 </script>
 <?php
 	//variable holen
+	if(isset($_GET['zellennummer'])) {
+ 
 			$zellennummer = $_GET['zellennummer'];
 			echo "Zellennumer".$zellennummer;
 			$bilder = scandir('images'); //Den Ordner "images" auslesen
@@ -153,6 +155,25 @@ Text
 				}
 			}
 			echo "</div>";
+	}else{
+	//falls keine zellennummer gesetzt ist
+		echo "<SCRIPT LANGUAGE= \"javascript\">";
+		echo "Weite = Fensterweite();
+	   Zellennummer = 2;
+		if(Weite > 1000){
+			Zellennummer = 1
+		}
+		else 
+			{
+			Zellennummer = 2;
+		
+		}";	 
+		
+		echo "location.href=\"index.php?zellennummer=\"+Zellennummer; ;";
+		echo "</SCRIPT>n";
+		 echo "keine zeilennummer gesetzt-- -reload";
+	}
+	
 	?>;
 
 

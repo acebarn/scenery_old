@@ -4046,3 +4046,96 @@ Stack trace:
 #22 {main}
 REQUEST_URI=/git/scenery/index.php
 ---
+2013/09/11 16:29:08 [error] [php] Undefined index: zellennummer (C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php:125)
+Stack trace:
+#0 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php(13): CWebApplication->run()
+REQUEST_URI=/scenery/scenery/
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php (125)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php (32)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php (13)
+2013/09/11 16:30:31 [error] [php] Undefined index: zellennummer (C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php:125)
+Stack trace:
+#0 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php(13): CWebApplication->run()
+REQUEST_URI=/scenery/scenery/index.php
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php (125)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php (32)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php (13)
+2013/09/11 16:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "&zellennummer=1".' in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(141): CWebApplication->runController('&zellennummer=1')
+#1 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/scenery/scenery/index.php/&zellennummer=1
+---
+2013/09/11 16:31:05 [error] [php] Undefined index: zellennummer (C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php:125)
+Stack trace:
+#0 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php(13): CWebApplication->run()
+REQUEST_URI=/scenery/scenery/index.php
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php (125)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php (32)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php (13)
+2013/09/11 16:34:11 [error] [php] Use of undefined constant zellennummer - assumed 'zellennummer' (C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php:126)
+Stack trace:
+#0 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php(13): CWebApplication->run()
+REQUEST_URI=/scenery/scenery/index.php?zellennummer=%271%27
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php (126)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php (32)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php (13)
+2013/09/12 09:13:17 [error] [php] Undefined index: zellennummer (C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php:152)
+Stack trace:
+#0 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php(13): CWebApplication->run()
+REQUEST_URI=/scenery/scenery/
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\views\site\index.php (152)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\protected\controllers\SiteController.php (32)
+in C:\Users\xce35h4\Downloads\xampp\htdocs\scenery\scenery\index.php (13)
