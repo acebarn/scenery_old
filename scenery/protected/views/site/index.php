@@ -80,45 +80,8 @@ $this->pageTitle=Yii::app()->name;
 
 
 	function neuAufbau () {
-	  if (Weite != Fensterweite()){
-
-
-		location.href="index.php?zellennummer="+Zellennummer; 
-
-
-		//location.href = location.href;
-
-
-		}
-	}
-
-	/* Überwachung von Netscape initialisieren */
-	if (!window.Weite && window.innerWidth) {
-	  window.onresize = neuAufbau;
-	  Weite = Fensterweite();
-	   Zellennummer = 2;
-		if(Weite < 1000){
-			Zellennummer = 1
-		}
-		else
-			{
-			Zellennummer = 2;
-		//	alert("Hallo");
-		}
-
-	}
-</script>
-
-<body>
-<script type="text/javascript">
-	/* Überwachung von Internet Explorer initialisieren */
-	if (!window.Weite && document.body && document.body.offsetWidth) {
-
-
-	 window.onresize = neuAufbau;
-	  Weite = Fensterweite();
-	   Zellennummer = 2;
-		if(Weite > 1000){
+	 
+		if(window.innerWidth > 1000){
 			Zellennummer = 1
 		}
 		else 
@@ -126,7 +89,24 @@ $this->pageTitle=Yii::app()->name;
 			Zellennummer = 2;
 			//alert("Hallo");
 		}	 
+	  var elem = document.getElementsByName("elementGalerie");
+	  for(var i = 0; i < elem.length; i++) {
+		
+			elem[i].className = "span"+Zellennummer;
+		}
+	}
 
+	/* Überwachung von Netscape initialisieren */
+	if (!window.Weite && window.innerWidth) {
+	  window.onresize = neuAufbau;
+	}
+</script>
+
+<body>
+<script type="text/javascript">
+	/* Überwachung von Internet Explorer initialisieren */
+	if (!window.Weite && document.body && document.body.offsetWidth) {
+	 window.onresize = neuAufbau; 
 	}
 </script>
 <div id="Beispiel" style="position:absolute; top:100px; left:100px; border:solid 1px #000000;">
@@ -139,43 +119,29 @@ Text
 </script>
 <?php
 	//variable holen
-	if(isset($_GET['zellennummer'])) {
- 
-			$zellennummer = $_GET['zellennummer'];
-			echo "Zellennumer".$zellennummer;
 			$bilder = scandir('images'); //Den Ordner "images" auslesen
 			echo "<div class=\"row\">";
 			foreach ($bilder as $datei)
 			{
 				if (!is_dir('images/'.$datei) && $datei != "." && $datei != ".."  && $datei != "_notes" && pathinfo($datei)['basename'] != "Thumbs.db" &&  (pathinfo($datei)['extension'] == 'jpg' || pathinfo($datei)['extension'] == 'JPG' ))
 				{
-					echo "	<div class=\"span".$zellennummer."\">";
+					echo "	<div class=\"span1\" name = \"elementGalerie\" >";
 					echo "		<a href=\"images/".$datei."\" class=\"thumbnail\" data-gallery=\"gallery\"><img src=\"images/".$datei."\" width=\"200\" height=\"200\"></a>";
 					echo "	</div>";
 				}
 			}
 			echo "</div>";
-	}else{
+	
 	//falls keine zellennummer gesetzt ist
-		echo "<SCRIPT LANGUAGE= \"javascript\">";
-		echo "Weite = Fensterweite();
-	   Zellennummer = 2;
-		if(Weite > 1000){
-			Zellennummer = 1
-		}
-		else 
-			{
-			Zellennummer = 2;
-		
-		}";	 
-		
-		echo "location.href=\"index.php?zellennummer=\"+Zellennummer; ;";
+		echo "<SCRIPT LANGUAGE= \"javascript\">
+		neuAufbau ;
+		";	 
 		echo "</SCRIPT>n";
-		 echo "keine zeilennummer gesetzt-- -reload";
-	}
+	
 	
 	?>;
-
+<div id="refresh"></div>
+</div>;
 
 
 
