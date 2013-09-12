@@ -10,7 +10,7 @@ $this->pageTitle=Yii::app()->name;
         <h1>Scenery Bildergalerie</h1>
         <p>Herzlich wilkommen bei Scenery! <br> Wenn du glaubst, wir seien Image-Hoster, solltest du dich dringendst von dieser Seite entfernen, da wir bereits die Hunde auf dich losgelassen haben...<br>Falls du nur gute Fotografie bestaunen willst, bist du immernoch herzlich willkommen!</p>
         
-        <blockquote>
+       <blockquote>
             <p>Warum andere Galerien benutzen, wenn man die Scenery-Bildergalerie benutzen kann??? Außerdem sind hier die Bilder besser und wir haben Schokokekse!</p>
         </blockquote>
         <p>
@@ -50,6 +50,19 @@ $this->pageTitle=Yii::app()->name;
 		
 			elem[i].className = "span"+Zellennummer;
 		}
+		
+		
+		//Bildergröse ändern
+		
+		elem = document.getElementsByName("pic");
+		var breite = window.innerWidth/(12/Zellennummer);
+		for(var i = 0; i < elem.length; i++) {
+			
+			elem[i].width = breite;
+			elem[i].height = breite;
+		}
+		
+		
 	}
 
 	/* Überwachung von Netscape initialisieren */
@@ -72,7 +85,7 @@ $this->pageTitle=Yii::app()->name;
 				if (!is_dir('images/'.$datei) && $datei != "." && $datei != ".."  && $datei != "_notes" && pathinfo($datei)['basename'] != "Thumbs.db" &&  (pathinfo($datei)['extension'] == 'jpg' || pathinfo($datei)['extension'] == 'JPG' ))
 				{
 					echo "	<div class=\"span1\" name = \"elementGalerie\" >";
-					echo "		<a href=\"images/".$datei."\" class=\"thumbnail\" data-gallery=\"gallery\"><img src=\"images/".$datei."\" width=\"200\" height=\"200\"></a>";
+					echo "		<a href=\"images/".$datei."\" class=\"thumbnail\" data-gallery=\"gallery\"><img src=\"images/".$datei."\" name = \"pic\" width=\"200\" height=\"200\"></a>";
 					echo "	</div>";
 				}
 			}
