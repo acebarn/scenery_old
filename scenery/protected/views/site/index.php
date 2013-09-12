@@ -3,18 +3,6 @@
 
 $this->pageTitle=Yii::app()->name;
 
-//  $baseUrl = Yii::app()->baseUrl;
-//  $cs = Yii::app()->getClientScript();
-//  $cs->registerCssFile($baseUrl.'/css/bootstrap.css');
-//  $cs->registerCssFile($baseUrl.'/css/bootstrap-image-gallery.css');
-//  $cs->registerCssFile($baseUrl.'/css/bootstrap.min.css');
-
-// $cs->registerScriptFile($baseUrl.'/js/bootstrap.js');
-// $cs->registerScriptFile($baseUrl.'/js/load-image.js');
-// $cs->registerScriptFile($baseUrl.'/js/bootstrap-image-gallery.js');
-// $cs->registerScriptFile($baseUrl.'/js/main.js');
-// $cs->registerScriptFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
-
 ?>
 
 <div class="container-fluid">
@@ -32,40 +20,7 @@ $this->pageTitle=Yii::app()->name;
     </header>
 		
     <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
-		<!--
-		<?php
-			$bilder = scandir('images'); //Den Ordner "images" auslesen
-			
-			foreach ($bilder as $datei)
-			{
-				echo "<a href=\"images/".$datei."\" data-gallery=\"gallery\">".$datei."</a>";
-				echo "<br>";
-			}
-		?>
-		-->
-	
-	<?php
-			$bilder = scandir('images'); //Den Ordner "images" auslesen
-			echo "<div class=\"row\">";
-			foreach ($bilder as $datei)
-			{
-				if (!is_dir('images/'.$datei) && $datei != "." && $datei != ".."  && $datei != "_notes" && pathinfo($datei)['basename'] != "Thumbs.db" &&  (pathinfo($datei)['extension'] == 'jpg' || pathinfo($datei)['extension'] == 'JPG' ))
-				{
-					echo "	<div class=\"span2\">";
-					echo "		<a href=\"images/".$datei."\" class=\"thumbnail\" data-gallery=\"gallery\"><img src=\"images/".$datei."\" width=\"200\" height=\"200\"></a>";
-					echo "	</div>";
-				}
-			}
-			echo "</div>";
-	?>
-	</div>
-	
-	
-	
-	
-	
-	
-	
+
 	
 <script type="text/javascript">
 	function Fensterweite () {
@@ -87,8 +42,9 @@ $this->pageTitle=Yii::app()->name;
 		else 
 			{
 			Zellennummer = 2;
-			//alert("Hallo");
-		}	 
+		
+		}	
+			//Durch den Namen kann man auch zwischen großen und kleinen Eleenten Unterscheiden
 	  var elem = document.getElementsByName("elementGalerie");
 	  for(var i = 0; i < elem.length; i++) {
 		
@@ -101,24 +57,14 @@ $this->pageTitle=Yii::app()->name;
 	  window.onresize = neuAufbau;
 	}
 </script>
-
-<body>
 <script type="text/javascript">
 	/* Überwachung von Internet Explorer initialisieren */
 	if (!window.Weite && document.body && document.body.offsetWidth) {
 	 window.onresize = neuAufbau; 
 	}
 </script>
-<div id="Beispiel" style="position:absolute; top:100px; left:100px; border:solid 1px #000000;">
-Text
-</div>
-<script type="text/javascript">
-	document.write("Weite: " + Weite);
-	
-
-</script>
 <?php
-	//variable holen
+	//Der Galeria-Aufruf, mit dem Zusatz, dass namen gesetzt sind. Über den namen kann man später auch zwischen dem großen und den kleinen Bidlern unterschiden
 			$bilder = scandir('images'); //Den Ordner "images" auslesen
 			echo "<div class=\"row\">";
 			foreach ($bilder as $datei)
@@ -132,20 +78,10 @@ Text
 			}
 			echo "</div>";
 	
-	//falls keine zellennummer gesetzt ist
-		echo "<SCRIPT LANGUAGE= \"javascript\">
-		neuAufbau ;
-		";	 
-		echo "</SCRIPT>n";
-	
-	
+	//das erste mal neuAufbai
+		echo "<SCRIPT LANGUAGE= \"javascript\">neuAufbau ;";	 
+		echo "</SCRIPT>";
 	?>;
-<div id="refresh"></div>
-</div>;
-
-
-
-
 	
 <!-- modal-gallery is the modal dialog used for the image gallery -->
 <div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
