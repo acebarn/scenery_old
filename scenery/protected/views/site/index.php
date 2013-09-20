@@ -6,6 +6,8 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 <div class="container-fluid">
+
+
     <header>
         <h1>Scenery Bildergalerie</h1>
         <p>Herzlich wilkommen bei Scenery! <br> Wenn du glaubst, wir seien Image-Hoster, solltest du dich dringendst von dieser Seite entfernen, da wir bereits die Hunde auf dich losgelassen haben...<br>Falls du nur gute Fotografie bestaunen willst, bist du immernoch herzlich willkommen!</p>
@@ -19,63 +21,8 @@ $this->pageTitle=Yii::app()->name;
         </p>
     </header>
 		
-    <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+   <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
 
-	
-<script type="text/javascript">
-	function Fensterweite () {
-	  if (window.innerWidth) {
-		return window.innerWidth;
-	  } else if (document.body && document.body.offsetWidth) {
-		return document.body.offsetWidth;
-	  } else {
-		return 0;
-	  }
-	}
-
-
-	function neuAufbau () {
-	 
-		if(window.innerWidth > 1000){
-			Zellennummer = 1
-		}
-		else 
-			{
-			Zellennummer = 2;
-		
-		}	
-			//Durch den Namen kann man auch zwischen großen und kleinen Eleenten Unterscheiden
-	  var elem = document.getElementsByName("elementGalerie");
-	  for(var i = 0; i < elem.length; i++) {
-		
-			elem[i].className = "span"+Zellennummer;
-		}
-		
-		
-		//Bildergröse ändern
-		
-		elem = document.getElementsByName("pic");
-		var breite = window.innerWidth/(12/Zellennummer);
-		for(var i = 0; i < elem.length; i++) {
-			
-			elem[i].width = breite;
-			elem[i].height = breite;
-		}
-		
-		
-	}
-
-	/* Überwachung von Netscape initialisieren */
-	if (!window.Weite && window.innerWidth) {
-	  window.onresize = neuAufbau;
-	}
-</script>
-<script type="text/javascript">
-	/* Überwachung von Internet Explorer initialisieren */
-	if (!window.Weite && document.body && document.body.offsetWidth) {
-	 window.onresize = neuAufbau; 
-	}
-</script>
 <?php
 	//Der Galeria-Aufruf, mit dem Zusatz, dass namen gesetzt sind. Über den namen kann man später auch zwischen dem großen und den kleinen Bidlern unterschiden
 			$bilder = scandir('images'); //Den Ordner "images" auslesen
@@ -84,7 +31,7 @@ $this->pageTitle=Yii::app()->name;
 			{
 				if (!is_dir('images/'.$datei) && $datei != "." && $datei != ".."  && $datei != "_notes" && pathinfo($datei)['basename'] != "Thumbs.db" &&  (pathinfo($datei)['extension'] == 'jpg' || pathinfo($datei)['extension'] == 'JPG' ))
 				{
-					echo "	<div class=\"span1\" name = \"elementGalerie\" >";
+					echo "	<div class=\"span2\" name = \"elementGalerie\" >";
 					echo "		<a href=\"images/".$datei."\" class=\"thumbnail\" data-gallery=\"gallery\"><img src=\"images/".$datei."\" name = \"pic\" width=\"200\" height=\"200\"></a>";
 					echo "	</div>";
 				}
