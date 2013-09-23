@@ -1,0 +1,61 @@
+<script type="text/javascript">
+	function Fensterweite () {
+	  if (window.innerWidth) {
+		return window.innerWidth;
+	  } else if (document.body && document.body.offsetWidth) {
+		return document.body.offsetWidth;
+	  } else {
+		return 0;
+	  }
+	}
+
+
+	function neuAufbau () {
+	 
+		if(window.innerWidth > 1000){
+			Zellennummer = 2;
+		}
+		else  if( window.innerWidth >700)
+			{
+			Zellennummer = 3;
+		
+		}	else if (window.innerWidth > 350){
+			Zellennummer = 4;
+		}else if(window.innerWidth > 100){
+			Zellennummer = 6;
+		}else{
+			Zellennummer = 12;
+		
+		}
+			//Durch den Namen kann man auch zwischen groﬂen und kleinen Eleenten Unterscheiden
+	  var elem = document.getElementsByName("elementGalerie");
+	  for(var i = 0; i < elem.length; i++) {
+		
+			elem[i].className = "span"+Zellennummer;
+		}
+		
+		
+		//Bildergrˆse ‰ndern
+		
+		elem = document.getElementsByName("pic");
+		var breite = window.innerWidth/(12/Zellennummer);
+		for(var i = 0; i < elem.length; i++) {
+			
+			elem[i].width = breite;
+			elem[i].height = breite;
+		}
+		
+		
+	}
+
+	/* ‹berwachung von Netscape initialisieren */
+	if (!window.Weite && window.innerWidth) {
+	  window.onresize = neuAufbau;
+	}
+</script>
+<script type="text/javascript">
+	/* ‹berwachung von Internet Explorer initialisieren */
+	if (!window.Weite && document.body && document.body.offsetWidth) {
+	 window.onresize = neuAufbau; 
+	}
+</script>

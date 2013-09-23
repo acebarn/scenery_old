@@ -21,13 +21,7 @@ $this->pageTitle = Yii::app ()->name;
 
 		
 	
-		<style>			
-			div#gallery span.block {
-			    width: 220px;
-			    display: inline-block;
-			    float:left;
-			}
-		</style>
+		
 	</header>
 	<div data-toggle="modal-gallery"
 		data-target="#modal-gallery">

@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+
+div#gallery span.block {
+	width: 220px;
+	display: inline-block;
+	float: left;
+}

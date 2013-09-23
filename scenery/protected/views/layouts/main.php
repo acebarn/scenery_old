@@ -22,7 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-image-gallery.css" />
 <!-- 	wichtig fuer die Responsive-Grid-Gallery -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-responsive.css" />
-	
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/flow_galery_style.css" />
 	
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
