@@ -24,7 +24,6 @@ $this->pageTitle=Yii::app()->name;
    <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
 
 <?php
-	//Der Galeria-Aufruf, mit dem Zusatz, dass namen gesetzt sind. Über den namen kann man später auch zwischen dem großen und den kleinen Bidlern unterschiden
 			$bilder = scandir('images'); //Den Ordner "images" auslesen
 			echo "<div class=\"row\">";
 			foreach ($bilder as $datei)
@@ -38,9 +37,7 @@ $this->pageTitle=Yii::app()->name;
 			}
 			echo "</div>";
 	
-	//das erste mal neuAufbai
-		echo "<SCRIPT LANGUAGE= \"javascript\">neuAufbau ;";	 
-		echo "</SCRIPT>";
+
 	?>;
 	
 <!-- modal-gallery is the modal dialog used for the image gallery -->
