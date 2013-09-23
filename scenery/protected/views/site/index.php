@@ -6,27 +6,21 @@ $this->pageTitle = Yii::app ()->name;
 
 <div class="container-fluid">
 	<header>
-		<h1>Scenery Bildergalerie</h1>
+		<h1>Scenery - Like A Picture</h1>
 		<p>
-			Herzlich wilkommen bei Scenery! <br> Wenn du glaubst, wir seien
-			Image-Hoster, solltest du dich dringendst von dieser Seite entfernen,
-			da wir bereits die Hunde auf dich losgelassen haben...<br>Falls du
-			nur gute Fotografie bestaunen willst, bist du immernoch herzlich
-			willkommen!
+			Herzlich wilkommen bei Scenery!
+			<br> 
+			<br>
+			<br>
+			Die Plattform mit den wohl besten Bildern der Welt ! 
+			<br>
+			<br>
+			<br>
+			Hier unsere Top-Hits:
 		</p>
 
-		<blockquote>
-			<p>Warum andere Galerien benutzen, wenn man die Scenery-Bildergalerie
-				benutzen kann??? Außerdem sind hier die Bilder besser und wir haben
-				Schokokekse!</p>
-		</blockquote>
-		<p>
-			<button id="start-slideshow" class="btn btn-large btn-success"
-				data-slideshow="5000" data-target="#modal-gallery"
-				data-selector="#gallery [data-gallery=gallery]">Starte eine Diashow</button>
-			<button id="toggle-fullscreen" class="btn btn-large btn-primary"
-				data-toggle="button">Vollbildmodus</button>
-		</p>
+		
+	
 		<style>			
 			div#gallery span.block {
 			    width: 220px;
@@ -53,6 +47,15 @@ foreach ( $bilder as $datei ) {
 }
 
 ?>
+	<p>
+			<button id="start-slideshow" class="btn btn-large btn-success"
+				data-slideshow="5000" data-target="#modal-gallery"
+				data-selector="#gallery [data-gallery=gallery]">Starte eine Diashow</button>
+			<button id="toggle-fullscreen" class="btn btn-large btn-primary"
+				data-toggle="button">Vollbildmodus</button>
+		</p>
+
+
 	</div>
 	</div>
 		<!-- modal-gallery is the modal dialog used for the image gallery -->

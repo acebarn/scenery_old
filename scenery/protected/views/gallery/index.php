@@ -9,5 +9,5 @@ $this->breadcrumbs=array(
 <h1>Galerie</h1>
 
 <p>
-	Die Scenery-Bildergalerie ist die beste Bildergalerie auf dem Markt und sie leuchtet im Dunklen!
+	Die Besten der Besten der Besten, thematisch sortiert !
 </p>
