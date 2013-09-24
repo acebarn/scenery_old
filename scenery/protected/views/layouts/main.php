@@ -8,20 +8,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-theme.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-theme.min.css" />
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 	
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-image-gallery.css" />
-<!-- 	wichtig fuer die Responsive-Grid-Gallery -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-responsive.css" />
+	
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/flow_galery_style.css" />
 	
 
@@ -36,9 +32,7 @@ $baseUrl = Yii::app()->request->baseUrl;  //Root-Pfad in Variable speichern
 $cs = Yii::app()->getClientScript();   //Das Client-Skript anfordern
 $cs->registerCoreScript('jquery');
 $cs->registerScriptFile($baseUrl.'/js/bootstrap.js');
-$cs->registerScriptFile($baseUrl.'/js/load-image.js');
-$cs->registerScriptFile($baseUrl.'/js/bootstrap-image-gallery.js');
-$cs->registerScriptFile($baseUrl.'/js/main.js');
+$cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js');
 ?>
 
 
@@ -51,9 +45,11 @@ $cs->registerScriptFile($baseUrl.'/js/main.js');
 <!-- 	<div id="mainmenu"> -->
 	<div class="navbar navbar-fixed-top navbar-inverse" >
 	    <div class="navbar-inner">
-	        <div class="container-fluid">
-	            <a class="brand" href="<?php echo Yii::app()->homeUrl; ?>"><?php echo Yii::app()->name; ?></a>
-	            <div class="nav-collapse">
+	        <div class="container">
+	            <a class="navbar-brand" href="<?php echo Yii::app()->homeUrl; ?>"><?php echo Yii::app()->name; ?></a>
+	            <div class="navbar-collapse">
+	             	 <div class="btn-toolbar">
+	             	  <div class="btn-group">
 					<?php $this->widget('zii.widgets.CMenu',array(
 						'items'=>array(
 							array('label'=>'Galerie', 'url'=>array('/gallery/index')),
@@ -64,29 +60,15 @@ $cs->registerScriptFile($baseUrl.'/js/main.js');
 						),
 						'htmlOptions'=>array('class'=>'nav'),
 					)); ?>
-				</div>
+				
+</div>
+</div>
+</div>
+
+
 	        </div>
 	    </div>
-	</div>
-<!-- 	</div> -->
-	
-	<!-- mainmenu 
-	
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	            </a>
-	            <a class="brand" href="#">Eine Bildergalerie mit Bootstrap</a>
-	            <div class="nav-collapse">
-	                <ul class="nav">
-	                    <li><a href="#">Home</a></li>
-	                    <li><a href="#">Bildergalerie</a></li>
-	                    <li><a href="#">Über uns</a></li>
-	                </ul>
-	            
-	-->
-	
+	</div>	
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
@@ -100,7 +82,6 @@ $cs->registerScriptFile($baseUrl.'/js/main.js');
 	<div id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> by scenery.<br/>
 		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 
 </div><!-- page -->

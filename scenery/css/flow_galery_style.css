@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 div#gallery span.block {
-	width: 220px;
+	width: 210px;
 	display: inline-block;
 	float: left;
 }
