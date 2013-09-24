@@ -16,6 +16,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/navbar.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/flow_galery_style.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-image-gallery.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-image-gallery.min.css" />
 	
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -30,6 +32,10 @@ $cs = Yii::app()->getClientScript();   //Das Client-Skript anfordern
 $cs->registerCoreScript('jquery');
 $cs->registerScriptFile($baseUrl.'/js/bootstrap.js');
 $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js');
+$cs->registerScriptFile($baseUrl.'/js/load-image.js');
+$cs->registerScriptFile($baseUrl.'/js/bootstrap-image-gallery.js');
+$cs->registerScriptFile($baseUrl.'/js/bootstrap-image-gallery.min.js');
+$cs->registerScriptFile($baseUrl.'/js/main.js');
 ?>
 
 
