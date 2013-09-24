@@ -7,17 +7,14 @@
 <!-- 	naechste Zeile ist Wichtig fuer die Responsive-Grid-Galliery -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<!-- blueprint CSS framework -->
-	
+	<!-- blueprint CSS framework -->	
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-theme.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-theme.min.css" />
-
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-	
-	
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/navbar.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/flow_galery_style.css" />
 	
 
@@ -43,13 +40,12 @@ $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js');
 <!-- 	</div> -->
 
 <!-- 	<div id="mainmenu"> -->
+
 	<div class="navbar navbar-fixed-top navbar-inverse" >
 	    <div class="navbar-inner">
 	        <div class="container">
 	            <a class="navbar-brand" href="<?php echo Yii::app()->homeUrl; ?>"><?php echo Yii::app()->name; ?></a>
-	            <div class="navbar-collapse">
-	             	 <div class="btn-toolbar">
-	             	  <div class="btn-group">
+	            <div class="navbar-collapse">	     
 					<?php $this->widget('zii.widgets.CMenu',array(
 						'items'=>array(
 							array('label'=>'Galerie', 'url'=>array('/gallery/index')),
@@ -58,14 +54,9 @@ $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js');
 							array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 							array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 						),
-						'htmlOptions'=>array('class'=>'nav'),
+						
 					)); ?>
-				
-</div>
-</div>
-</div>
-
-
+				</div>
 	        </div>
 	    </div>
 	</div>	
@@ -85,6 +76,5 @@ $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js');
 	</div><!-- footer -->
 
 </div><!-- page -->
-
 </body>
 </html>
