@@ -16,7 +16,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/navbar.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/flow_galery_style.css" />
-	
+	<!-- 	für die Gallerie  -->
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/blueimp-gallery.min.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -30,6 +31,8 @@ $cs = Yii::app()->getClientScript();   //Das Client-Skript anfordern
 $cs->registerCoreScript('jquery');
 $cs->registerScriptFile($baseUrl.'/js/bootstrap.js');
 $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js');
+// für die gallerie
+$cs->registerScriptFile($baseUrl.'/js/blueimp-gallery.min.js');
 ?>
 
 
