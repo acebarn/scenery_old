@@ -1,16 +1,13 @@
 ﻿<?php
 /* @var $this SiteController */
+
+echo "<br>";
 $this->pageTitle = Yii::app ()->name;
 
 ?>
 
 <div class="container">
 	<header>
-
-
-
-
-
 
 		<h1 align=center>Scenery - Like A Picture</h1>
 		<p align="center">Herzlich wilkommen bei der besten Bilderwebseite der
@@ -54,7 +51,7 @@ foreach ( $bilder as $datei ) {
 	if (!is_dir('images/'.$datei) && $datei != "." && $datei != ".."  && $datei != "_notes" && pathinfo($datei)['basename'] != "Thumbs.db" &&  (pathinfo($datei)['extension'] == 'jpg' || pathinfo($datei)['extension'] == 'JPG' )){
 		echo "	<span class=\"block\" >";
 	 
-		echo "		<a href=\"images/" . $datei . "\" class=\"thumbnail\" data-gallery=\"gallery\"><img src=\"images/" . $datei . "\"  width=\"200\" height=\"200\" title=\"tololololo\"></a>";
+		echo "		<a href=\"images/" . $datei . "\" class=\"thumbnail\" data-gallery=\"gallery\"><img src=\"images/" . $datei . "\"  width=\"200px\" height=\"200px\" title=\"tololololo\"></a>";
 		echo "	</span>";
 	}
 }

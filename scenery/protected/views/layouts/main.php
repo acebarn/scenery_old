@@ -63,6 +63,7 @@ $cs->registerScriptFile($baseUrl.'/js/blueimp-gallery.min.js');
 	        </div>
 	    </div>
 	</div>	
+	<br>
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
