@@ -55,9 +55,12 @@ $cs->registerScriptFile($baseUrl.'/js/blueimp-gallery-htmlauslagerung.js');
 							array('label'=>'Galerie', 'url'=>array('/gallery/index')),
 							array('label'=>'Über Uns', 'url'=>array('/site/page', 'view'=>'about')),
 							array('label'=>'Kontakt', 'url'=>array('/site/contact')),
+							array('label'=>'Bilder Upload', 'url'=>array('/site/upload'), 'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+							array('label'=>'Benutzerverwaltung', 'url'=>array('/user/'), 'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-						),
+							
+			),
 						
 					)); ?>
 				</div>

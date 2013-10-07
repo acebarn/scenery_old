@@ -55,8 +55,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=web3_db1',
 			'emulatePrepare' => true,
-			'username' => 'web3_db1',
-			'password' => 'HalloIchBinScenery;-)',
+			'username' => 'root',
+// 			'password' => 'HalloIchBinScenery;-)',
 			'charset' => 'utf8',
 		),
 	
