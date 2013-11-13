@@ -44,7 +44,7 @@ $cs->registerScriptFile($baseUrl.'/js/bootstrap.js');
 $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js');
 // für die gallerie
 $cs->registerScriptFile($baseUrl.'/js/blueimp-gallery.min.js');
-$cs->registerScriptFile($baseUrl.'/js/blueimp-gallery-htmlauslagerung.js');
+
 ?>
 
 
