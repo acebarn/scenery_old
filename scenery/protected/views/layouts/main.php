@@ -94,6 +94,10 @@ $cs->registerScriptFile($baseUrl.'/js/blueimp-gallery.min.js');
 	
 	<br>
 		Copyright &copy; <?php echo date('Y'); ?> by scenery.<br/>
+		<a href="http://www.likeapicture.de/impressum.html">Impressum, Disclaimer, Datenschutzerkl&auml;rung</a> <br>
+		
+		
+		
 		All Rights Reserved.<br/>
 	</div><!-- footer -->
 
